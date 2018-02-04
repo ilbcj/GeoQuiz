@@ -50,6 +50,7 @@ public class QuizActivity extends AppCompatActivity {
         }
 
         mQuestionTextView = (TextView)findViewById(R.id.question_text_view);
+
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
         mQuestionTextView.setOnClickListener(new View.OnClickListener(){
@@ -61,6 +62,7 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         mTrueButton = (Button)findViewById(R.id.true_button);
+        //mTrueButton = (Button)findViewById(R.id.question_text_view);
         mTrueButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -68,7 +70,7 @@ public class QuizActivity extends AppCompatActivity {
                 //tosat.setGravity(Gravity.TOP, 0, 0);
                 //tosat.show();
                 checkAnswer(true);
-                
+
             }
         });
         mFalseButton = (Button)findViewById(R.id.false_button);
@@ -133,8 +135,10 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void updateQuestion() {
+        //Log.d(TAG, "Updating question text ", new Exception());
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
+        Log.d(TAG, "Updating question text -- finish");
     }
 
     private void checkAnswer(boolean userPressedTrue) {
