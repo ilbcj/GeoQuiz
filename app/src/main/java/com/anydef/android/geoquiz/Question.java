@@ -28,6 +28,6 @@ public class Question {
     public Question(int textResId, boolean answerTrue) {
         mTextResId = textResId;
         mAnswerTrue = answerTrue;
-        
+        // test merge ff
     }
 }
