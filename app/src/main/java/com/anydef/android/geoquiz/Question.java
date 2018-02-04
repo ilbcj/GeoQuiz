@@ -28,7 +28,6 @@ public class Question {
     public Question(int textResId, boolean answerTrue) {
         mTextResId = textResId;
         mAnswerTrue = answerTrue;
-        //for test merge
-        int test =  textResId + 10;
+        
     }
 }
